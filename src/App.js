@@ -1,26 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import Aux from "./hoc/Auxiliary/Auxiliary.js"
+import Layout from "./components/Layout/Layout.js"
+import BurgerBuilder from "./containers/BurgerBuilder/BurgerBuilder.js"
+const App = props => (
+	<Aux>
+		<Layout>
+			<BurgerBuilder/>
+		</Layout>
+	</Aux>
+);
 
 export default App;
